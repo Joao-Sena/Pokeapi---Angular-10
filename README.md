@@ -27,6 +27,9 @@ O código do projeto está separado em pastas:
 - Testes realizados: ng lint - OK
 - Testes automatizados e unitários não realizados (não possuo experiência)
 
+## Build
+Depois de de verificar o funcionamento do projeto foi rodado o comando de build "ng build --prod" e deram certo, gerando o build do projeto sem nenhum problema.
+
 ## Qualquer dúvida
 E-mail: joaosena.contato@gmail.com
 Linkedin: https://www.linkedin.com/in/joaovscardoso/
