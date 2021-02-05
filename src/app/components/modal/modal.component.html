@@ -1,0 +1,32 @@
+<div class="modal fade modal-fullscreen mt-5" id="modalDetalhe" tabindex="-1" 
+aria-labelledby="modalDetalhe" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content card-radius">
+        <div class="modal-header header-radius" [ngClass]="pokemonDetalhes.types[0].type.name">
+          <h5 class="modal-title chave" id="exampleModalLabel">Detalhes do pokemon</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body" *ngIf="pokemonDetalhes">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-4">
+                        <img class="imagem" src="{{pokemonDetalhes?.sprites.front_default}}" width="150" alt="Imagem do pokemon do card">
+                        <p class="text-center" [ngClass]="pokemonDetalhes.types[0].type.name">{{pokemonDetalhes?.name | uppercase}}</p>
+                    </div>
+                    <div class="col-8 border-start informacoes-modal">
+                        <p class="titulo-info">Id: <span class="informacao"># 0{{pokemonDetalhes.id}}</span></p>
+                        <p class="titulo-info">Altura: <span class="informacao">{{pokemonDetalhes.height}}</span></p>
+                        <p class="titulo-info">Peso: <span class="informacao">{{pokemonDetalhes.weight}}</span></p>
+                        <p class="titulo-info">Habilidade: <span class="informacao">{{pokemonDetalhes.abilities[0].ability.name}}</span></p>
+                        <p class="titulo-info">Tipo(s):</p>
+                        <button class="botao atributo me-3"
+                            *ngFor="let tipo of pokemonDetalhes.types"
+                         [ngClass]="tipo.type.name">{{tipo.type.name}}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,70 @@
+.subtitulo{
+    color: #dfdfdf;
+    font-weight: 330;
+    font-size: 16px;
+    text-align: center;
+}
+
+hr{ color: #fff; }
+
+// FIM DAS CORES PARA OS BOTÕES
+
+.card-pokemon{
+    // background: #fff !important;
+    border-radius: 10px;
+    padding: 16px;
+    position: relative;
+    box-shadow: 0px 0px 10px 6px #0a0a0a52;
+    .id-pokemon{
+        font-size: 14px;
+        background: #ffffff7a;
+        padding: 3px 20px;
+        border-radius: 8px;
+        margin: 0 auto;
+        color: #696969;
+    }
+    .nome-pokemon{
+        font-size: 16px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #383838;
+        margin: 10px 0px 0px 0px;
+    }
+    .tipo-pokemon{
+        font-size: 14px;
+        font-weight: 430;
+        color: #383838;
+        margin: 4px 0px 0px 0px;
+    }
+
+    .chave{
+        color: rgb(255, 255, 255);
+        font-size: 16px;
+        font-weight: 500;
+        text-shadow: 0px 1px 1px #0000008f;
+    }
+    
+    .atributo{
+        color:#fcfcfc;
+        font-size: 15px;
+        font-weight: 500;
+        text-shadow: 0px 1px 1px #0000008f;
+    }
+    &:hover{ animation: bounce 0.5s linear; }
+}
+
+@keyframes bounce {
+	20% {
+		    transform: translateY(-6px);
+	}
+	40% {
+			transform: translateY(0px);
+	}
+
+	80% {
+			transform: translateY(-2px);
+	}
+	100% {
+			transform: translateY(0);
+	}
+}

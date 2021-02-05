@@ -1,1 +1,100 @@
 /* You can add global styles to this file, and also import other style files */
+// Estilos gerais que serão utilizados em mais de 1 componente de aplicação
+
+body{ 
+    background: #242424;
+    background-image: url('./assets/img/background.jpg');
+    background-size: 100% auto;
+}
+
+.bg-main{
+    background: #3F51B5;
+    box-shadow: 0px 0px 3px 1px #0a0a0a20;
+}
+
+.botao{
+    border: none;
+    border-radius: 8px;
+    padding: 4px 16px;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    box-shadow: 0px 0px 3px 1px #0a0a0a20;
+    color: #000 !important;
+}
+
+.todos{
+    background: #dddddd;
+    color: #2c2c2c;
+}
+
+// CUSTOMIZAÇÃO DOS ITENS DE PAGINAÇÃO DA APLICAÇÃO
+.current {
+    background: none !important;
+    border: 1px solid #ffbb00 !important;
+    border-radius: 8px !important;
+    color: #ffbb00 !important;
+    font-weight: 500 !important;
+    font-size: 14px !important;
+}
+
+.my-pagination li,
+.my-pagination a {
+    color: #ffbb00 !important;
+    font-weight: 500 !important;
+}
+
+.my-pagination ul {
+    margin-bottom: 0px !important;
+}
+
+.ngx-pagination{
+    li{ color: #fff !important; }
+    li:hover{ color: #ffbb00 !important; cursor: pointer; }
+}
+
+// Cores de cada botão ou background dependendo do tipo do pokemon (veneno, agua, fogo, grama, etc)
+.grass{
+    background-image: linear-gradient(#b0ffe1da, #65dd93da);
+    color: #1f1f1f;
+}
+
+.fire{
+    background-image: linear-gradient(#ffb0b0da, #ff7a7ada);
+    color: #1f1f1f;
+}
+
+.water{
+    background-image: linear-gradient(#b0fcffda, #7abfffda);
+    color: #1f1f1f;
+}
+
+.bug{
+    background-image: linear-gradient(#a4ffd5da, #f8c3ffda);
+    color: #1f1f1f;
+}
+
+.dragon{
+    background-image: linear-gradient(#ffe3b0da, #ffd07ada);
+    color: #1f1f1f;
+}
+
+.poison{
+    background-image: linear-gradient(#d5b0ffda, #977affda);
+    color: #1f1f1f;
+}
+
+ .normal{
+    background-image: linear-gradient(#fffeb0da, #cecf64da);
+    color: #1f1f1f;
+ }
+
+ .ground{
+    background-image: linear-gradient(#d3b192da, #c59c5e80);
+    color: #1f1f1f;
+ }
+
+ .electric{
+    background-image: linear-gradient(#e9c85dda, #f7e861da);
+    color: #1f1f1f;
+ }

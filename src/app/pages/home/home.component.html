@@ -1,0 +1,114 @@
+<app-header></app-header>
+
+<div class="container">
+    <div class="row my-3" *ngIf="pokemons">
+
+        <!-- INÍCIO FILTRO POR BOTÕES -->
+
+        <div class="col-12">
+            <p class="subtitulo">Filtrar por tipo</p>
+        </div>
+
+        <hr class="hr mb-0">
+
+        <div class="col py-3 text-center">
+            <button class="botao todos" (click)="limpaFiltro()">Todos</button>
+        </div>
+
+        <div class="col py-3 text-center">
+            <button class="botao grass" (click)="filterByType('grass')">Grama</button>
+        </div>
+
+        <div class="col py-3 text-center">
+            <button class="botao water" (click)="filterByType('water')">água</button>
+        </div>
+
+        <div class="col py-3 text-center">
+            <button class="botao fire" (click)="filterByType('fire')">fogo</button>
+        </div>
+
+        <div class="col py-3 text-center">
+            <button class="botao bug" (click)="filterByType('bug')">inseto</button>
+        </div>
+
+        <div class="col py-3 text-center">
+            <button class="botao normal" (click)="filterByType('normal')">normal</button>
+        </div>
+
+        <div class="col py-3 text-center">
+            <button class="botao poison" (click)="filterByType('poison')">veneno</button>
+        </div>
+
+        <div class="col py-3 text-center">
+            <button class="botao electric" (click)="filterByType('electric')">elétrico</button>
+        </div>
+
+        <hr class="hr">
+
+        <!-- FIM FILTRO POR BOTÕES -->
+
+    </div>
+
+    <div class="row" *ngIf="pokemons">
+        <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-4" 
+        *ngFor="let pokemon of pokemons | paginate: { 
+                id: 'paginacaoPokemons',
+                itemsPerPage: pageSize,
+                currentPage: page,
+                totalItems: pokemons?.length
+            }">
+            <div class="card-pokemon text-center" [ngClass]="pokemon.types[0].type.name">
+                <img class="imagem" src="{{pokemon.sprites.front_default}}" width="120" alt="Imagem do pokemon do card">
+                <br>
+                <!-- <span class="text-center id-pokemon"># 0{{id + 1}}</span> -->
+                <p class="nome-pokemon">{{pokemon.name}}</p>
+                <p class="tipo-pokemon">Tipo: {{pokemon.types[0].type.name}}</p>
+                <hr class="hr">
+                <div class="row">
+                    <div class="col">
+                        <p class="chave">Peso</p>
+                        <p class="atributo">{{pokemon.weight}}</p>
+                    </div>
+
+                    <div class="col">
+                        <p class="chave">Altura</p>
+                        <p class="atributo">{{pokemon.height}}</p>
+                    </div>
+
+                    <div class="col">
+                        <p class="chave">XP</p>
+                        <p class="atributo">{{pokemon.base_experience}}</p>
+                    </div>
+                </div>
+
+                <button class="botao" [ngClass]="pokemon.types[0].type.name" data-bs-toggle="modal" data-bs-target="#modalDetalhe" (click)="setPokemonDetail(pokemon)">+ Detalhes</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="w-100 text-center">
+        <pagination-controls id="paginacaoPokemons" (pageChange)="page = $event"
+        responsive="true" previousLabel="Anterior" nextLabel="Próxima"></pagination-controls>
+    </div>
+
+    <!-- Enquanto está consultando a API é exibido esse loading -->
+    <div class="row" *ngIf="!pokemons.length">
+        <div class="text-center">
+            <div class="spinner-border c-primary" role="status">
+              <span class="sr-only"></span>
+            </div>
+            <p>Consultando pokemons ...</p>
+      </div>
+    </div>
+
+    <!-- Modal quando clica em detalhar o pokemon -->
+    <app-modal 
+    [pokemonDetalhes]="pokemonDetalhes"
+    ></app-modal>
+
+    <!-- Casso a API do pokemon caia é exibida esta mensagem de erro -->
+    <div class="row" *ngIf="pokemons === false">
+        <p>Desculpa ocorreu um erro no servidor do PokeApi, tente novamente.</p>
+    </div>
+
+</div>

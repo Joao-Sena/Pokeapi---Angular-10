@@ -1,27 +1,30 @@
-# Pokeapi
+#  PokeApi Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
+## Sobre o projeto
 
-## Development server
+Este projeto é uma aplicação construída em Angular 10, com o intuito de criar uma Pokedex utilizando a api PokeApi.
+Este projeto foi desenvolvido com o layout focada para desktop, porém é possível abri-lo em um dispositivo móvel e navegar tranquilamente já que está responsivel.
+Esta pokedex foi pensada para funcionar de maneira simples, apenas com a página Home, porém possuindo opções de filtros e paginação para facilitar a navegação do usuário, e para obter mais detalhes do Pokemon é necessário apenas clicar no botão para abrir um modal, assim não sendo necessário sair da página atual no estado em que se encontra.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Rodar projeto
+O projeto não possúi nenhuma dependência externa, para rodá basta possuir instalado em sua máquina:
+- Angular 10
+- Node
 
-## Code scaffolding
+Depois de já ter esses requisitos instalados basta:
+1 - Baixar o projeto do GIT
+2 - Rodar o comando no terminal "npm install"
+3 - Ligar o servidor do projeto rodando "ng serve -o" via terminal
+4 - Pronto o projeto já estará rodando :)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Sobre o código e desenvolvimento
+O código do projeto está separado em pastas:
+- Components: componentes genéricos que servem para a aplicação inteira
+- Pages: Páginas da aplicação, onde os usuário irão navegar
+- Services: Onde é montada as chamadas para as API`s e as regras de negócio, caso sejam necessárias
+- Testes realizados: ng lint - OK
+- Testes automatizados e unitários não realizados (não possuo experiência)
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Qualquer dúvida
+E-mail: joaosena.contato@gmail.com
+Linkedin: https://www.linkedin.com/in/joaovscardoso/
