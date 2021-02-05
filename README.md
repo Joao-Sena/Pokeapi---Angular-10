@@ -33,7 +33,7 @@ Linkedin: https://www.linkedin.com/in/joaovscardoso/
 
 ## Prints da aplicação
 <span>
-  <img src="https://raw.githubusercontent.com/Joao-Sena/Pokeapi---Angular-10/master/src/assets/img/home.png" width="48%">
+  <img src="https://raw.githubusercontent.com/Joao-Sena/Pokeapi---Angular-10/master/src/assets/img/home.PNG" width="48%">
 </span>
 <span>
   <img src="https://raw.githubusercontent.com/Joao-Sena/Pokeapi---Angular-10/master/src/assets/img/modal.png" width="48%">
